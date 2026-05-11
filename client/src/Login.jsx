@@ -6,19 +6,23 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("https://mern-user-authendication.onrender.com/login", {
+
+   try {
+    const res = await axios.post(
+      "https://mern-user-authendication.onrender.com/login",
+      {
         email,
         password,
-      });
-      alert(res.data.message);
-    } catch (err) {
-      alert("Invalid credentials ❌");
-    }
-  };
+      }
+    );
 
+    alert(res.data.message);
+  } catch (err) {
+    alert("Invalid credentials ❌");
+  }
+};
   return (
     <div className="form-container">
       <h2>🔑 Login</h2>
