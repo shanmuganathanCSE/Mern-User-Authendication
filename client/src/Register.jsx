@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/register", {
+      await axios.post("https://mern-user-authendication.onrender.com/register", {
         name,
         email,
         password,
