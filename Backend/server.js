@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+mongoose.set("strictQuery", false);
 mongoose.connect("mongodb+srv://shanmuganathans2005:shan26072005@shanmugam.kqynwfs.mongodb.net/?appName=Shanmugam", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -58,4 +59,8 @@ app.post("/login", async (req, res) => {
   res.json({ message: "Login successful 🎉", token });
 });
 
-app.listen(5000, () => console.log("🚀 Server running on http://localhost:5000"));
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
