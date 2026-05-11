@@ -1,0 +1,17 @@
+{
+  "name": "mern-auth-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node server.js"
+  },
+ 
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cons": "^0.0.2",
+    "express": "^5.1.0",
+    "moongose": "^1.0.0"
+  }
+}
